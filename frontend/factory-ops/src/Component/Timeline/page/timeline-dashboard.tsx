@@ -1,6 +1,6 @@
 import moment from "moment";
 import React from "react";
-import Timeline, { TimelineItem, TimelineItemBase } from 'react-calendar-timeline'
+import Timeline, {TimelineItemBase } from 'react-calendar-timeline'
 import "react-calendar-timeline/lib/Timeline.css";
 
 const TimelineDashboard = () =>
@@ -29,8 +29,8 @@ const TimelineDashboard = () =>
 			items={items}
 			defaultTimeStart={moment().add(-1,'day')}
 			defaultTimeEnd={moment().add(2,'day')}
-			canMove
-			canResize
+			canMove={true}
+			canResize={'both'}
       ></Timeline>
 	)
 }
